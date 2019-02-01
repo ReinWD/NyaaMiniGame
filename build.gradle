@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'NyaaCat'
+version '1.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://hub.spigotmc.org/nexus/content/repositories/snapshots"
+    }
+    maven {
+        name 'NyaaCentral'
+        url 'https://raw.githubusercontent.com/NyaaCat/NyaaCentral/maven-repo'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compileOnly "org.spigotmc:spigot-api:1.12-R0.1-SNAPSHOT"
+    compile('cat.nyaa:nyaacore:6.2-SNAPSHOT') {
+        transitive = false
+    }
+}

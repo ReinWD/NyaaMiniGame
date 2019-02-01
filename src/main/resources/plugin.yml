@@ -1,0 +1,21 @@
+name: NyaaMiniGame
+main: moe.reinwd.nmg.NyaaMiniGame
+description: "NyaaMiniGame"
+version: 1.0
+depend: [NyaaCore]
+authors: [ReinWD]
+website: "https://github.com/ReinWD/NyaaMiniGame"
+database: false
+
+commands:
+  nmg:
+    description: Nyaa Mini Game
+    permission: minigame
+    permission-message: "You do not have the required permission: <permission>"
+    usage: "/<command> [SubCommand...] [Arguments...] or /<command> help"
+
+#permissions:
+#  rpgitem.allowenchant.new:
+#    default: op
+#  rpgitem.allowenchant.old:
+#    default: op
