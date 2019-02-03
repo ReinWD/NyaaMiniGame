@@ -118,7 +118,10 @@ public class EventListener implements Listener {
 
     @EventHandler
     public void onStartGlide(EntityToggleGlideEvent event){
-        if (!plugin.isElytraEnabled())event.setCancelled(true);
+        if (!plugin.isElytraEnabled()){
+            if (event.isGliding())
+                event.setCancelled(true);
+        }
     }
 
 //    @EventHandler
